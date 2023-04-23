@@ -84,8 +84,9 @@ public class MemberApiController {
                 .map(m -> new MemberDto(m.getName()))
                 .collect(Collectors.toList());
 
-        return new Result(collect);
+        return new Result(collect);   // Result클래스로 한번 더 감싸서, 코드의 유연성을 높인다.
     }
+
 
     @Data
     @AllArgsConstructor
